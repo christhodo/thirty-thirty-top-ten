@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@top-ten/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@top-ten/core-data": ["libs/core-data/src/index.ts"],
+      "@top-ten/environment": ["libs/environment/src/index.ts"],
+      "@top-ten/material": ["libs/material/src/index.ts"],
+      "@top-ten/ui-login": ["libs/ui-login/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

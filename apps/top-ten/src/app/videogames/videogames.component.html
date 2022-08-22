@@ -1,0 +1,17 @@
+<div class="videogames-containers">
+  <div class="videogames-list">
+    <top-ten-app-videogames-list
+      [videogames]="videogames$ | async"
+      (selected)="selectVideogame($event)"
+      (deleted)="deleteVideogame($event)"
+    >
+    </top-ten-app-videogames-list>
+  </div>
+  <div class="videogame-details">
+    <top-ten-app-videogame-details
+      [videogame]="selectedVideogame"
+      (cancelled)="reset()"
+      (saved)="saveVideogame($event)"
+    ></top-ten-app-videogame-details>
+  </div>
+</div>

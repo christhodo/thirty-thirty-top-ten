@@ -2,7 +2,12 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "api-interfaces": "libs/api-interfaces",
+    "core-data": "libs/core-data",
+    "environment": "libs/environment",
+    "material": "libs/material",
     "top-ten": "apps/top-ten",
-    "top-ten-e2e": "apps/top-ten-e2e"
+    "top-ten-e2e": "apps/top-ten-e2e",
+    "ui-login": "libs/ui-login"
   }
 }

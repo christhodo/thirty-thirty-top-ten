@@ -1,0 +1,20 @@
+{
+  "videogames": [
+    {
+      "id": "1",
+      "title": "NBA2K3",
+      "platform": "all",
+      "rating": null,
+      "released": "TBD",
+      "genre": "Sports"
+    },
+    {
+      "id": "2",
+      "title": "Final Fantasy VII",
+      "platform": "all",
+      "rating": null,
+      "allstar": "2012",
+      "genre": "RPG"
+    }
+  ]
+}

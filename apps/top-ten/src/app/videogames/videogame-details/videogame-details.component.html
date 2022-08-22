@@ -1,0 +1,72 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <span *ngIf="currentVideogame?.id; else elseBlock">
+        {{ originalTitle | titlecase }}
+      </span>
+      <ng-template #elseBlock>Select a Videogame</ng-template>
+    </mat-card-title>
+  </mat-card-header>
+  <form #form="ngForm" (submit)="saved.emit(currentVideogame)">
+    <mat-card-content>
+      <mat-form-field class="full-width" appearance="outline" floatlabel>
+        <mat-label>Title</mat-label>
+        <input
+          matInput
+          placeholder="Title"
+          [(ngModel)]="currentVideogame.title"
+          name="title"
+          required
+          type="text"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="outline" floatlabel>
+        <mat-label>Platform</mat-label>
+        <textarea
+          matInput
+          placeholder="platform"
+          [(ngModel)]="currentVideogame.platform"
+          name="platform"
+          type="text"
+        ></textarea>
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="outline" floatlabel>
+        <mat-label>Rating</mat-label>
+        <textarea
+          matInput
+          placeholder="rating"
+          [(ngModel)]="currentVideogame.rating"
+          name="rating"
+          type="text"
+        ></textarea>
+      </mat-form-field>
+      <section class="full-width" appearance="outline" floatlabel></section>
+      <section class="full-width">
+        <h4>{{ currentVideogame.rating }} Overall Rating</h4>
+        <mat-slider
+          class="full-width"
+          min="0"
+          max="100"
+          thumbLabel
+          name="Rating"
+          [(ngModel)]="currentVideogame.rating"
+        >
+        </mat-slider>
+      </section>
+    </mat-card-content>
+    <section></section>
+    <mat-card-actions>
+      <button
+        type="submit"
+        [disabled]="form.invalid"
+        mat-button
+        color="primary"
+      >
+        Save
+      </button>
+      <button type="button" mat-button (click)="cancelled.emit()">
+        Cancel
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>

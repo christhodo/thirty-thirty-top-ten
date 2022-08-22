@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'top-ten';
+  links = [
+    { path: '/videogames', icon: 'view_list', title: 'Games' },
+    { path: '/login', icon: 'person', title: 'Login' },
+  ];
 }
